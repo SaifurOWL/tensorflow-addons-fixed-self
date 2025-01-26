@@ -32,6 +32,8 @@ if Version(tf.__version__).release >= Version("2.16").release:
         from keras import KerasTensor
     else:
         from tf_keras.src.engine.keras_tensor import KerasTensor
+elif Version(tf.__version__).release >= Version("2.15").release:
+    from keras.engine.keras_tensor import KerasTensor
 elif Version(tf.__version__).release >= Version("2.13").release:
     from keras.src.engine.keras_tensor import KerasTensor
 elif Version(tf.__version__).release >= Version("2.5").release:
