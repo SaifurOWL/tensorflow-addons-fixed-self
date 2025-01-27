@@ -19,7 +19,8 @@ from typing import Union, Callable, List
 import importlib
 import numpy as np
 import tensorflow as tf
-import keras
+#experimental import. Cuurently Disabled
+#import keras
 
 from packaging.version import Version
 
@@ -34,7 +35,7 @@ if Version(tf.__version__).release >= Version("2.16").release:
     else:
         from tf_keras.src.engine.keras_tensor import KerasTensor
 elif Version(tf.__version__).release >= Version("2.15").release:
-    from keras.engine.keras_tensor import KerasTensor
+    from keras.keras_tensor import KerasTensor
 elif Version(tf.__version__).release >= Version("2.13").release:
     from keras.src.engine.keras_tensor import KerasTensor
 elif Version(tf.__version__).release >= Version("2.5").release:
