@@ -19,6 +19,7 @@ from typing import Union, Callable, List
 import importlib
 import numpy as np
 import tensorflow as tf
+import keras
 
 from packaging.version import Version
 
