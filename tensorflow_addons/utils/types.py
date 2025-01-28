@@ -35,7 +35,7 @@ if Version(tf.__version__).release >= Version("2.16").release:
     else:
         from tf_keras.src.engine.keras_tensor import KerasTensor
 elif Version(tf.__version__).release >= Version("2.15").release:
-    from keras.keras_tensor import KerasTensor
+    from tf.python.keras.engine.keras_tensor import KerasTensor #Detailed Path. Trial for direct import from tensorflow
 elif Version(tf.__version__).release >= Version("2.13").release:
     from keras.src.engine.keras_tensor import KerasTensor
 elif Version(tf.__version__).release >= Version("2.5").release:
